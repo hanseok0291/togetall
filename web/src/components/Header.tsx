@@ -31,9 +31,12 @@ export async function Header() {
         <Link href="/" className="text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
           Togetall
         </Link>
-        <nav className="flex items-center gap-4 text-sm">
+        <nav className="flex flex-wrap items-center justify-end gap-x-4 gap-y-1 text-sm">
           <Link href="/posts" className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100">
             파트너·모집
+          </Link>
+          <Link href="/races" className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100">
+            대회일정
           </Link>
           {user ? (
             <>
