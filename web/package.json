@@ -9,6 +9,7 @@
     "dev": "next dev --webpack",
     "postinstall": "node ./scripts/ensure-lightningcss-native.mjs",
     "build": "next build",
+    "postbuild": "node ./scripts/sync-root-next-manifest.mjs",
     "start": "next start",
     "lint": "eslint",
     "sync:marathon-odcloud": "node --env-file=.env.local ./scripts/sync-odcloud-marathon.mjs",
