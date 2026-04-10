@@ -9,3 +9,9 @@
 The root `package.json` lists `next` so Vercel detects Next.js; `vercel.json` installs both root stubs and `web/` dependencies, then runs `npm run build --prefix web`.
 
 **Local:** from repo root: `npm install && npm install --prefix web`, then `npm run dev` / `npm run build`.
+
+### “No Next.js version detected” / old commit in logs
+
+- In the build log, check **Commit:** — it must be **`d5bb502` or newer** (e.g. `9be384d`). Older commits (e.g. `224d35c`) had **no `next` in the repo-root `package.json`**, so Vercel failed when Root Directory was empty.
+- Do not **Redeploy** an old failed deployment; open **Deployments**, pick the latest push to `main`, or push a new commit.
+- Optional: **Redeploy** with “Clear build cache” if a deployment still behaves oddly.
