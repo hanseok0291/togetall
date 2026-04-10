@@ -1,5 +1,6 @@
--- Togetall initial schema (PRD §3) + RLS
--- Run in Supabase SQL Editor or via: supabase db push
+-- 참고용 PRD 초기 스키마 (posts·comments 등). 자동 마이그레이션에서는 제외됨.
+-- 운영·로컬 앱은 migrations/ 의 20250406* 체인을 사용하세요.
+-- 이 파일만 단독으로 “빈 프로젝트”에 적용하는 경우에만 SQL Editor에서 실행.
 
 create extension if not exists "pgcrypto";
 
